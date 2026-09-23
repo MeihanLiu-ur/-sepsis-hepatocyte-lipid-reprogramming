@@ -1,0 +1,10 @@
+set,gene,detect,mean,note
+VLDL_assembly,Apob,0.8502,1.8084,
+VLDL_assembly,Mttp,0.365,0.5292,
+VLDL_assembly,Tm6sf2,0.1178,0.1653,
+VLDL_assembly,Sar1b,0.3488,0.5195,
+HDL_apolipo,Apoa1,0.977,2.3134,
+HDL_apolipo,Apoa2,0.956,2.1986,
+HDL_apolipo,Apoa4,0.281,0.5085,
+Shared_regulator,Apoc3,0.7803,1.5463,
+Shared_regulator,Apoe,0.948,2.1995,

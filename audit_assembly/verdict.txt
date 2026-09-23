@@ -1,0 +1,19 @@
+基因集拆分审计 —— 判定记录
+======================================================================
+
+h5ad      : data/proc/hep_only.h5ad
+独立队列  : data/proc/bulk_HEP_CLP_vs_Sham.csv
+梯度      : data/proc/aucell_main.csv:zonation_index
+
+C1 单细胞共表达 : 不支持
+C2 先验功能归属 : (人工填写)
+     - VLDL_assembly: Apob, Mttp, Tm6sf2, Sar1b
+       理由(基因家族/亚细胞定位/底物产物/上游调控):
+     - HDL_apolipo: Apoa1, Apoa2, Apoa4
+       理由(基因家族/亚细胞定位/底物产物/上游调控):
+     - Shared_regulator: Apoc3, Apoe
+       理由(基因家族/亚细胞定位/底物产物/上游调控):
+C3 方向显著性   : 不支持
+C4 梯度分布     : 支持
+
+自动化核查通过 1/3

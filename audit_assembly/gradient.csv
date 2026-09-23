@@ -1,0 +1,10 @@
+set,gene,rho
+VLDL_assembly,Apob,-0.1087
+VLDL_assembly,Mttp,-0.1417
+VLDL_assembly,Tm6sf2,-0.0429
+VLDL_assembly,Sar1b,-0.0975
+HDL_apolipo,Apoa1,0.1089
+HDL_apolipo,Apoa2,0.1686
+HDL_apolipo,Apoa4,0.0568
+Shared_regulator,Apoc3,0.0617
+Shared_regulator,Apoe,0.1716
