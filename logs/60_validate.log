@@ -1,0 +1,73 @@
+==========================================================================
+Tier 2 验证层: GSE311736 纯化肝细胞 bulk (n=4 CLP vs 4 Sham)
+==========================================================================
+[load] 完整矩阵: 55,414 基因 x 39 样本
+[subset] 肝细胞列 (8): ['HEP_CLP-1', 'HEP_CLP-2', 'HEP_CLP-3', 'HEP_CLP-4', 'HEP_Sham-1', 'HEP_Sham-2', 'HEP_Sham-3', 'HEP_Sham-4']
+[map] 读本地缓存 data/validation/ensembl2symbol.tsv: 54,774 条
+[map] 转换后: 55,294 个 symbol
+[filter] 总计数 >= 10: 保留 14,426 / 55,294
+[design] {'CLP': np.int64(4), 'Sham': np.int64(4)}
+
+[save] 全基因差异表 -> data/proc/bulk_HEP_CLP_vs_Sham.csv
+
+==========================================================================
+关键基因:snRNA 发现的方向是否在独立 bulk 队列中复现
+==========================================================================
+program               gene        log2FC     pvalue       padj  方向
+Cholesterol_synth     Sqle         0.680   2.47e-02   9.00e-02  ↑
+Cholesterol_synth     Hmgcs1      -0.506   7.17e-02   1.93e-01  ↓
+Cholesterol_synth     Hmgcr        0.494   7.51e-02   1.99e-01  ↑
+Cholesterol_synth     Msmo1       -0.647   2.34e-02   8.61e-02  ↓
+Cholesterol_synth     Fdps         0.346   5.81e-01   7.69e-01  ↑
+Lipogenesis           Acaca        1.104   1.33e-06   2.04e-05  ↑
+Lipogenesis           Fasn         2.192   2.11e-21   2.05e-19  ↑
+Lipogenesis           Scd1         1.001   3.61e-02   1.18e-01  ↑
+Lipogenesis           Acly         0.666   2.29e-03   1.35e-02  ↑
+Lipogenesis           Elovl6       1.414   1.56e-07   2.94e-06  ↑
+FAO                   Cpt1a       -0.677   3.52e-04   2.83e-03  ↓
+FAO                   Acadm       -0.636   7.89e-04   5.59e-03  ↓
+FAO                   Acadl       -0.252   1.76e-01   3.61e-01  ↓
+FAO                   Hadha       -0.552   1.47e-03   9.41e-03  ↓
+FAO                   Echs1       -0.211   2.75e-01   4.83e-01  ↓
+Fatty_acid_uptake     Cd36         0.765   1.36e-02   5.67e-02  ↑
+Fatty_acid_uptake     Slc27a1     -0.134   7.83e-01   8.98e-01  ↓
+Fatty_acid_uptake     Slc27a2     -0.478   5.73e-04   4.26e-03  ↓
+Fatty_acid_uptake     Fabp1       -0.309   2.17e-01   4.17e-01  ↓
+Lipoprotein_uptake    Ldlr        -0.645   1.32e-02   5.54e-02  ↓
+Lipoprotein_uptake    Scarb1       0.722   8.71e-04   6.10e-03  ↑
+Lipoprotein_uptake    Lrp1        -0.181   3.52e-01   5.67e-01  ↓
+Lipoprotein_assembly  Apoa1        0.291   1.64e-01   3.46e-01  ↑
+Lipoprotein_assembly  Apoa2        0.081   5.58e-01   7.53e-01  ≈
+Lipoprotein_assembly  Apob         0.333   2.05e-02   7.75e-02  ↑
+Lipoprotein_assembly  Mttp        -0.165   3.57e-01   5.70e-01  ↓
+Efflux                Abca1        2.999  9.64e-113  2.99e-109  ↑
+Efflux                Abcg5        0.073   8.15e-01   9.16e-01  ≈
+Efflux                Abcg8       -1.039   1.50e-03   9.54e-03  ↓
+Efflux                Apoe        -0.134   3.32e-01   5.46e-01  ↓
+Lipid_peroxidation    Gpx4         0.097   5.86e-01   7.73e-01  ≈
+Lipid_peroxidation    Acsl4        0.348   4.94e-02   1.48e-01  ↑
+Lipid_peroxidation    Hmox1        3.271   3.50e-07   6.11e-06  ↑
+Lipid_peroxidation    Alox5                          -- 未检出 --
+Lipid_peroxidation    Tfrc        -0.079   8.32e-01   9.24e-01  ≈
+
+==========================================================================
+程序层:竞争性基因集检验(程序基因 log2FC vs 全背景, Wilcoxon)
+==========================================================================
+                  program  n  mean_log2FC  median_log2FC  bg_median  p_gene_set
+                      FAO 12       -0.421         -0.452       0.01    0.038205
+               Peroxisome 11       -0.577         -0.383       0.01    0.065095
+              Lipogenesis  9        0.850          1.001       0.01    0.045080
+        Cholesterol_synth 15       -0.293         -0.506       0.01    0.213370
+     Lipoprotein_assembly  8        0.136          0.153       0.01    0.567728
+                   Uptake  8       -0.117         -0.221       0.01    0.632440
+                   Efflux  7       -0.633         -0.282       0.01    0.261040
+       Lipid_peroxidation  8        1.291          0.223       0.01    0.203487
+   Fatty_acid_uptake [拆分]  4       -0.039         -0.221       0.01    0.798420
+  Lipoprotein_uptake [拆分]  3       -0.035         -0.181       0.01    0.873890
+
+==========================================================================
+结论提示
+==========================================================================
+  padj < 0.05 的基因数: 2,871 / 14,426
+  统计设计: n=4 vs 4 -> 置换分组数 C(8,4) = 70,最小可达 p = 0.0143
+  这个队列**可以**承载正式统计,snRNA 的 n=2 限制由此解除。

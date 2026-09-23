@@ -1,0 +1,32 @@
+肝细胞 59,121; bulk 差异表 14,426 基因; 程序 12 条
+[save] figures/Fig3_lipid_reprogramming.pdf
+[save] figures/Fig3_lipid_reprogramming.png
+[save] figures/FigS_zonation_negative.pdf
+[save] figures/FigS_zonation_negative.png
+
+============================================================================================
+出图完成。12 条程序层间一致性归账:
+============================================================================================
+  program                  snRNA(校正)  bulk mean     显著基因  geneset p   判定
+  FAO                          -35.7     -0.421        5      0.038   ✓✓
+  Peroxisome                   -12.0     -0.577        4      0.065   ✓
+  Lipogenesis                   29.5      0.850        5      0.045   ✓✓
+  Cholesterol_synth            115.7     -0.293        3      0.213   ✗
+  Lipoprotein_assembly         -29.2      0.106        0      0.646   ∅
+  LDLR_clearance                 2.9     -1.097        2      0.073   ✗
+  Scavenger_SR_B                24.5      0.743        1        n<3   ✓
+  FA_transport                 -60.9     -0.353        2      0.303   ✓
+  HDL_efflux                   173.1      1.358        1        n<3   ✓
+  Biliary_excretion            -11.7     -0.711        4      0.050   ✓
+  Bile_acid_synth              -67.5     -3.397        2      0.046   ✓✓
+  Lipid_peroxidation           -32.2      1.291        3      0.203   ✗
+
+  主轴 1:外源进口关闭(LDLR 通路 + FATP) + FAO 受抑 → 脂质新生代偿激活
+  主轴 2:胆汁分泌轴关闭(胆汁酸合成 + 毛细胆管转运) ↔ ABCA1 介导的 HDL
+          外排极度激活 → 胆固醇出口重定向,对应脓毒症相关胆汁淤积
+  冲突项(方向相反)与阴性项(独立队列无可检出改变)均不进主线:
+    ✗ Cholesterol_synth: snRNA +115.7% vs bulk -0.293  —— 方向相反
+    ∅ Lipoprotein_assembly: snRNA -29.2% vs bulk +0.106  —— 独立队列 0 个基因 padj<0.05,未能复现
+    ✗ LDLR_clearance: snRNA +2.9% vs bulk -1.097  —— 方向相反
+    ✗ Lipid_peroxidation: snRNA -32.2% vs bulk +1.291  —— 方向相反
+============================================================================================

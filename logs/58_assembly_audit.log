@@ -1,0 +1,108 @@
+细胞 67,145  基因 40,879  候选子集 3 个
+梯度载入: zonation_index (n=67,145)
+独立队列载入: 14,426 基因
+
+[C0 检出率]
+               set   gene  detect   mean note
+     VLDL_assembly   Apob  0.8502 1.8084     
+     VLDL_assembly   Mttp  0.3650 0.5292     
+     VLDL_assembly Tm6sf2  0.1178 0.1653     
+     VLDL_assembly  Sar1b  0.3488 0.5195     
+       HDL_apolipo  Apoa1  0.9770 2.3134     
+       HDL_apolipo  Apoa2  0.9560 2.1986     
+       HDL_apolipo  Apoa4  0.2810 0.5085     
+  Shared_regulator  Apoc3  0.7803 1.5463     
+  Shared_regulator   Apoe  0.9480 2.1995     
+
+==============================================================================
+C1  单细胞共表达:这些基因在同一批细胞里一起表达吗?
+==============================================================================
+  gene_a gene_b within  pearson  co_detect
+    Apob   Mttp     组内   0.0833     0.3456
+    Apob Tm6sf2     组内   0.0144     0.1080
+    Apob  Sar1b     组内   0.0394     0.3211
+    Apob  Apoa1     组间   0.1070     0.8364
+    Apob  Apoa2     组间   0.0343     0.8184
+    Apob  Apoa4     组间   0.0717     0.2468
+    Apob  Apoc3     组间   0.0515     0.6744
+    Apob   Apoe     组间   0.0161     0.8113
+    Mttp Tm6sf2     组内   0.0178     0.0596
+    Mttp  Sar1b     组内   0.0754     0.1839
+    Mttp  Apoa1     组间  -0.1082     0.3619
+    Mttp  Apoa2     组间  -0.1578     0.3537
+    Mttp  Apoa4     组间  -0.0466     0.1027
+    Mttp  Apoc3     组间  -0.0825     0.2952
+    Mttp   Apoe     组间  -0.1561     0.3522
+  Tm6sf2  Sar1b     组内   0.0244     0.0564
+  Tm6sf2  Apoa1     组间   0.0263     0.1171
+  Tm6sf2  Apoa2     组间   0.0477     0.1161
+  Tm6sf2  Apoa4     组间   0.0393     0.0427
+  Tm6sf2  Apoc3     组间   0.0693     0.1039
+  Tm6sf2   Apoe     组间   0.0499     0.1157
+   Sar1b  Apoa1     组间  -0.0449     0.3451
+   Sar1b  Apoa2     组间  -0.0379     0.3394
+   Sar1b  Apoa4     组间  -0.0122     0.0999
+   Sar1b  Apoc3     组间  -0.0003     0.2857
+   Sar1b   Apoe     组间  -0.0218     0.3390
+   Apoa1  Apoa2     组内   0.4941     0.9390
+   Apoa1  Apoa4     组内   0.2731     0.2792
+   Apoa1  Apoc3     组间   0.3640     0.7703
+   Apoa1   Apoe     组间   0.4874     0.9318
+   Apoa2  Apoa4     组内   0.2834     0.2789
+   Apoa2  Apoc3     组间   0.5106     0.7652
+   Apoa2   Apoe     组间   0.6558     0.9171
+   Apoa4  Apoc3     组间   0.2539     0.2518
+   Apoa4   Apoe     组间   0.2905     0.2785
+   Apoc3   Apoe     组内   0.5062     0.7609
+  → 组内平均 |r| = 0.1811, 平均同时检出 = 33.3%
+  → C1 不支持拆(判据: 组内多数 |r|<0.10 且平均同时检出<30%)
+
+==============================================================================
+C3  方向显著性:独立队列里,方向相反的基因各自都显著吗?
+==============================================================================
+               set   gene  baseMean  log2FC     padj direction
+     VLDL_assembly   Apob  143303.2   0.333 0.077459         ↑
+     VLDL_assembly   Mttp    4211.8  -0.165 0.570433         ↓
+     VLDL_assembly Tm6sf2      96.8   0.098 0.907799         ≈
+     VLDL_assembly  Sar1b     932.3  -0.053 0.907754         ≈
+       HDL_apolipo  Apoa1   82926.3   0.291 0.345602         ↑
+       HDL_apolipo  Apoa2   36602.0   0.081 0.752581         ≈
+       HDL_apolipo  Apoa4    2429.9   0.295 0.803401         ↑
+  Shared_regulator  Apoc3    4655.0   0.207 0.470372         ↑
+  Shared_regulator   Apoe  171466.5  -0.134 0.546145         ↓
+  → 显著上调 0 个 / 显著下调 0 个
+  → C3 不支持拆(判据: 正反两方各至少有 1 个 padj<0.05;只有一方显著则视为噪音,不是真实分歧)
+      VLDL_assembly: 上调 1 / 下调 1 / 平 2   一致率 25%
+      HDL_apolipo: 上调 2 / 下调 0 / 平 1   一致率 67%
+      Shared_regulator: 上调 1 / 下调 1 / 平 0   一致率 50%
+
+==============================================================================
+C4  空间 / 梯度分布:沿连续梯度的分布是否不同?
+==============================================================================
+               set   gene     rho
+     VLDL_assembly   Apob -0.1087
+     VLDL_assembly   Mttp -0.1417
+     VLDL_assembly Tm6sf2 -0.0429
+     VLDL_assembly  Sar1b -0.0975
+       HDL_apolipo  Apoa1  0.1089
+       HDL_apolipo  Apoa2  0.1686
+       HDL_apolipo  Apoa4  0.0568
+  Shared_regulator  Apoc3  0.0617
+  Shared_regulator   Apoe  0.1716
+  → 各组平均 |ρ|: VLDL_assembly=0.098, HDL_apolipo=0.111, Shared_regulator=0.117
+  → 量级比 1.19×,符号集合 {1.0, -1.0}
+  → C4 支持拆(判据: 不同号,或同号但量级差≥2倍)
+
+==============================================================================
+判定汇总(C2 先验功能归属为人工判据,需使用者自行填写)
+==============================================================================
+  C1 单细胞共表达   : ✗ 不支持
+  C2 先验功能归属   : (人工)见 verdict.txt
+  C3 方向显著性     : ✗ 不支持
+  C4 空间/梯度分布  : ✓ 支持
+  自动化核查通过 1/3
+
+  → 仅一项支持:**不要拆**。改为如实报告内部异质性,把冲突基因单列。
+
+[save] audit_assembly/verdict.txt
+[save] audit_assembly/audit.pdf

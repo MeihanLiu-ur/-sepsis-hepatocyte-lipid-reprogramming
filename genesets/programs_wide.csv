@@ -1,0 +1,13 @@
+program,n_genes,genes
+FAO,12,Cpt1a;Cpt2;Acadm;Acadl;Acadvl;Hadha;Hadhb;Etfa;Etfb;Slc25a20;Acaa2;Echs1
+Peroxisome,11,Acox1;Acox2;Acox3;Hsd17b4;Scp2;Ehhadh;Abcd1;Abcd2;Abcd3;Decr2;Crat
+Lipogenesis,9,Acly;Acaca;Acacb;Fasn;Scd1;Scd2;Elovl6;Me1;Gpam
+Cholesterol_synth,15,Hmgcs1;Hmgcr;Mvd;Mvk;Fdps;Fdft1;Sqle;Lss;Cyp51;Msmo1;Nsdhl;Sc5d;Dhcr7;Dhcr24;Idi1
+Lipoprotein_assembly,9,Apob;Mttp;Tm6sf2;Sar1b;Apoa1;Apoa2;Apoa4;Apoc3;Apoe
+LDLR_clearance,5,Ldlr;Vldlr;Lrp1;Ldlrap1;Lrpap1
+Scavenger_SR_B,2,Scarb1;Cd36
+FA_transport,5,Slc27a1;Slc27a2;Slc27a4;Slc27a5;Fabp1
+HDL_efflux,2,Abca1;Pltp
+Biliary_excretion,6,Abcg5;Abcg8;Abcb11;Abcb4;Abcc2;Atp8b1
+Bile_acid_synth,3,Cyp7a1;Cyp8b1;Cyp27a1
+Lipid_peroxidation,10,Gpx4;Slc7a11;Acsl4;Alox5;Alox15;Hmox1;Fth1;Ftl1;Tfrc;Nqo1

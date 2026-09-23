@@ -1,0 +1,25 @@
+肝细胞 67,145; bulk 差异表 14,426 基因; 程序 10 条
+[save] figures/Fig3_lipid_reprogramming.pdf
+[save] figures/Fig3_lipid_reprogramming.png
+[save] figures/FigS_zonation_negative.pdf
+[save] figures/FigS_zonation_negative.png
+
+==============================================================================
+出图完成。层间一致性归账:
+==============================================================================
+  program                  snRNA(校正)  bulk mean  geneset p   判定
+  FAO                          -36.7     -0.421      0.038   ✓✓
+  Peroxisome                   -12.9     -0.577      0.065   ✓
+  Lipogenesis                   27.8      0.850      0.045   ✓✓
+  Cholesterol_synth            101.0     -0.293      0.213   ✗
+  Lipoprotein_assembly         -26.8      0.136      0.568   ✗
+  LDLR_clearance                -1.1     -1.097      0.073   ✓
+  Scavenger_SR_B                26.4      0.743        n<3   ✓
+  FA_transport                 -62.0     -0.353      0.303   ✓
+  Efflux                       -20.7     -0.633      0.261   ✓
+  Lipid_peroxidation           -32.8      1.291      0.203   ✗
+
+  故事主轴:外源脂质进口(LDLR 通路 + FATP)下调 + FAO 受抑,
+            脂质新生与 B 类清道夫受体代偿性上调(独立队列 padj 支撑)。
+  胆固醇合成与脂质过氧化两条程序层间冲突,已标 ✗,不进主线。
+==============================================================================

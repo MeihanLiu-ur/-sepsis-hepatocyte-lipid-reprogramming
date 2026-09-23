@@ -1,0 +1,152 @@
+[10:30:21] ======================================================================
+[10:30:21] C1 主流程 (一): 取数 -> QC -> 整合 -> 聚类 -> 注释
+[10:30:21] 参数: min_umi=1000 min_genes=500 max_genes=6000 max_mt=10.0 n_hvg=2500 res=0.8
+[10:30:21] ======================================================================
+[10:30:21] [load] GSM8482478 (liver_02, CLP)
+/Users/sister520/WorkBuddy/2026-08-28-21-09-18/sepsis-liver-zonation/scripts/10_preprocess.py:63: DeprecationWarning: The default value for `spmatrix` is changing to `False` in v1.20.
+             That means the default return type will be a sparse array.
+             Unless you use * instead of @, ** for matrix power, or you depend
+             on 2D shapes from e.g. `A.sum(axis=0)` it may not matter to you.
+             See the spmatrix to sparray migration guide for details.
+             https://docs.scipy.org/doc/scipy/reference/sparse.migration_to_sparray.html
+             
+  X = sio.mmread(mt_f).tocsc()              # 基因 x 细胞
+[10:30:23]   cell calling 诊断 (UMI 排名曲线):
+[10:30:23]       rank   5,000: UMI =     8,656
+[10:30:23]       rank  10,000: UMI =     3,103
+[10:30:23]       rank  20,000: UMI =       383
+[10:30:23]       rank  50,000: UMI =        85
+[10:30:23]       rank 100,000: UMI =        20
+[10:30:23]       UMI>=1000 且 n_genes>=200:   13,757 个
+[10:30:23]       UMI>= 500 且 n_genes>=200:   16,834 个
+[10:30:23]       UMI>= 300 且 n_genes>=200:   31,643 个
+[10:30:24]       raw 2,567,689 -> QC 后 12,118 (0.47%)
+[10:30:24] [load] GSM8482479 (liver_06, CLP)
+[10:30:27]       raw 2,737,417 -> QC 后 13,506 (0.49%)
+[10:30:27] [load] GSM8482480 (liver_10, CLP)
+[10:30:30]       raw 2,925,278 -> QC 后 19,573 (0.67%)
+[10:30:30] [load] GSM8482481 (liver_14, Sham)
+[10:30:34]       raw 3,616,985 -> QC 后 29,481 (0.82%)
+[10:30:34] [load] GSM8482482 (liver_18, Sham)
+[10:30:36]       raw 2,778,118 -> QC 后 9,941 (0.36%)
+[10:30:36] [load] GSM8482483 (liver_22, Sham)
+[10:30:38]       raw 1,861,147 -> QC 后 9,571 (0.51%)
+[10:30:38] [qc] 逐样本汇总已写 data/proc/qc_per_sample.csv
+[10:30:38] [merge] 合并 6 个样本
+[10:30:39]         合并后: 94,190 细胞 x 40,879 基因
+normalizing counts per cell
+    finished (0:00:01)
+extracting highly variable genes
+    finished (0:00:04)
+/Users/sister520/.workbuddy/binaries/python/versions/3.13.12/lib/python3.13/functools.py:934: UserWarning: zero-centering a sparse array/matrix densifies it.
+  return dispatch(args[0].__class__)(*args, **kw)
+computing PCA
+    with n_comps=50
+    finished (0:00:08)
+[10:30:57] [pca] done  (94190, 2500)
+2026-08-29 10:30:57,198 - harmonypy - INFO - Running Harmony
+2026-08-29 10:30:57,199 - harmonypy - INFO -   Parameters:
+2026-08-29 10:30:57,199 - harmonypy - INFO -     max_iter_harmony: 10
+2026-08-29 10:30:57,199 - harmonypy - INFO -     max_iter_kmeans: 4
+2026-08-29 10:30:57,199 - harmonypy - INFO -     epsilon_cluster: 0.001
+2026-08-29 10:30:57,199 - harmonypy - INFO -     epsilon_harmony: 0.01
+2026-08-29 10:30:57,199 - harmonypy - INFO -     nclust: 100
+2026-08-29 10:30:57,199 - harmonypy - INFO -     block_size: 0.05
+2026-08-29 10:30:57,199 - harmonypy - INFO -     lamb: dynamic (alpha=0.2)
+2026-08-29 10:30:57,199 - harmonypy - INFO -     theta: [2. 2. 2. 2. 2. 2.]
+2026-08-29 10:30:57,199 - harmonypy - INFO -     sigma: [0.1 0.1 0.1 0.1 0.1]...
+2026-08-29 10:30:57,199 - harmonypy - INFO -     verbose: True
+2026-08-29 10:30:57,199 - harmonypy - INFO -     random_state: 0
+2026-08-29 10:30:57,199 - harmonypy - INFO -   Data: 50 PCs × 94190 cells
+2026-08-29 10:30:57,199 - harmonypy - INFO -   Batch variables: ['batch']
+2026-08-29 10:30:57,237 - harmonypy - INFO - Computing initial centroids...
+2026-08-29 10:30:58,334 - harmonypy - INFO - Initialization complete.
+2026-08-29 10:30:58,334 - harmonypy - INFO - Iteration 1 of 10
+2026-08-29 10:30:59,000 - harmonypy - INFO - Iteration 2 of 10
+2026-08-29 10:30:59,680 - harmonypy - INFO - Iteration 3 of 10
+2026-08-29 10:31:00,338 - harmonypy - INFO - Iteration 4 of 10
+2026-08-29 10:31:01,003 - harmonypy - INFO - Iteration 5 of 10
+2026-08-29 10:31:01,667 - harmonypy - INFO - Iteration 6 of 10
+2026-08-29 10:31:02,332 - harmonypy - INFO - Iteration 7 of 10
+2026-08-29 10:31:03,002 - harmonypy - INFO - Iteration 8 of 10
+2026-08-29 10:31:03,673 - harmonypy - INFO - Iteration 9 of 10
+2026-08-29 10:31:04,344 - harmonypy - INFO - Iteration 10 of 10
+2026-08-29 10:31:05,014 - harmonypy - INFO - Stopped before convergence
+[10:31:05] [warn] harmony 失败(ValueError: Value passed for key 'X_pca_harmony' is of incorrect shape. Values of obsm must match dimensions ('obs',) of parent. Value had shape (50,) while it should have had (94190,).), 用未校正 PCA
+computing neighbors
+    finished (0:00:17)
+running Leiden clustering
+    finished (0:00:01)
+[10:31:24] [cluster] leiden res=0.8 -> 36 个 cluster
+[10:31:26]
+[10:31:26] [annot] cluster -> 细胞类型 (cluster 层 marker z-score 注释)
+[10:31:26]         0 -> Hepatocyte     n=  6,833 (  7.3%)
+[10:31:26]         1 -> Hepatocyte     n=    101 (  0.1%)
+[10:31:26]         2 -> Endothelial    n=  4,296 (  4.6%)
+[10:31:26]         3 -> Hepatocyte     n=  7,595 (  8.1%)
+[10:31:26]         4 -> Hepatocyte     n=  1,752 (  1.9%)
+[10:31:26]         5 -> Neutrophil     n=  2,723 (  2.9%)
+[10:31:26]         6 -> B              n=    105 (  0.1%)
+[10:31:26]         7 -> Hepatocyte     n=  4,906 (  5.2%)
+[10:31:26]         8 -> Hepatocyte     n=  4,527 (  4.8%)
+[10:31:26]         9 -> HSC            n=  2,861 (  3.0%)
+[10:31:26]        10 -> T_NK           n=    599 (  0.6%)
+[10:31:26]        11 -> Cholangiocyte  n=    874 (  0.9%)
+[10:31:26]        12 -> HSC            n=    635 (  0.7%)
+[10:31:26]        13 -> HSC            n=  4,366 (  4.6%)
+[10:31:26]        14 -> Macrophage     n=    908 (  1.0%)
+[10:31:26]        15 -> Hepatocyte     n=  2,040 (  2.2%)
+[10:31:26]        16 -> Hepatocyte     n= 24,470 ( 26.0%)
+[10:31:26]        17 -> Hepatocyte     n=    842 (  0.9%)
+[10:31:26]        18 -> Hepatocyte     n=  1,542 (  1.6%)
+[10:31:26]        19 -> B              n=  1,260 (  1.3%)
+[10:31:26]        20 -> Endothelial    n=  1,111 (  1.2%)
+[10:31:26]        21 -> HSC            n=    489 (  0.5%)
+[10:31:26]        22 -> Hepatocyte     n=  2,259 (  2.4%)
+[10:31:26]        23 -> HSC            n=    777 (  0.8%)
+[10:31:26]        24 -> B              n=  3,677 (  3.9%)
+[10:31:26]        25 -> B              n=    566 (  0.6%)
+[10:31:26]        26 -> B              n=  2,696 (  2.9%)
+[10:31:26]        27 -> B              n=    782 (  0.8%)
+[10:31:26]        28 -> T_NK           n=    294 (  0.3%)
+[10:31:26]        29 -> B              n=    199 (  0.2%)
+[10:31:26]        30 -> Cholangiocyte  n=    283 (  0.3%)
+[10:31:26]        31 -> Kupffer        n=    656 (  0.7%)
+[10:31:26]        32 -> Endothelial    n=    844 (  0.9%)
+[10:31:26]        33 -> Hepatocyte     n=    524 (  0.6%)
+[10:31:26]        34 -> Hepatocyte     n=  4,013 (  4.3%)
+[10:31:26]        35 -> Cholangiocyte  n=  1,785 (  1.9%)
+[10:31:26]
+[10:31:26] [annot] 细胞类型总览
+[10:31:26]       Hepatocyte       61,404  ( 65.2%)
+[10:31:26]       B                 9,285  (  9.9%)
+[10:31:26]       HSC               9,128  (  9.7%)
+[10:31:26]       Endothelial       6,251  (  6.6%)
+[10:31:26]       Cholangiocyte     2,942  (  3.1%)
+[10:31:26]       Neutrophil        2,723  (  2.9%)
+[10:31:26]       Macrophage          908  (  1.0%)
+[10:31:26]       T_NK                893  (  0.9%)
+[10:31:26]       Kupffer             656  (  0.7%)
+[10:31:26]
+[10:31:26] [annot] 分组构成 (行=细胞类型, 列=CLP/Sham)
+[10:31:26]       group            CLP   Sham
+[10:31:26]       celltype                   
+[10:31:26]       B               6826   2459
+[10:31:26]       Cholangiocyte    672   2270
+[10:31:26]       Endothelial     4256   1995
+[10:31:26]       HSC             2877   6251
+[10:31:26]       Hepatocyte     27268  34136
+[10:31:26]       Kupffer            1    655
+[10:31:26]       Macrophage         1    907
+[10:31:26]       Neutrophil      2694     29
+[10:31:26]       T_NK             602    291
+computing UMAP
+    finished (0:00:29)
+[10:31:56]
+[10:31:56] [save] -> data/proc/merged.h5ad   (94,190 细胞 x 40,879 基因)
+[10:31:56]
+[10:31:56] ======================================================================
+[10:31:56] [G1 复核] 聚类注释后肝细胞数 = 61,404
+[10:31:56]           Sham 组肝细胞 = 34,136  (门槛 1,500) -> PASS
+[10:31:56]           每 zone 约 = 11,378  (门槛 500) -> PASS
+[10:31:56] ======================================================================
