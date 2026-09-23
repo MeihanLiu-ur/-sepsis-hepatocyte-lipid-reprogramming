@@ -1,0 +1,14 @@
+# Environment used for the analyses reported in the manuscript.
+# Python 3.13 (3.11+ should work; scipy/numpy versions below are those actually used).
+scanpy==1.12.4
+anndata==0.13.3
+numpy==2.5.2
+pandas==3.0.5
+scipy==1.18.1
+statsmodels
+harmonypy
+pydeseq2
+mygene
+h5py
+matplotlib
+openpyxl

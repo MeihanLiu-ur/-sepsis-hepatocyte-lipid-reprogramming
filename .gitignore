@@ -1,0 +1,15 @@
+# ---- large single-cell intermediates (regenerated from public GEO data; not distributed) ----
+data/raw/
+*.h5ad
+*.h5
+*.mtx
+*.gz
+
+# ---- local / OS noise ----
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
