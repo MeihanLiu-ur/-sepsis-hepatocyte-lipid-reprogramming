@@ -1,0 +1,13 @@
+program,loose,strict,same
+FAO,-30.21,-29.99,✓
+Peroxisome,-0.11,-0.5,✓
+Lipogenesis,54.76,53.18,✓
+Cholesterol_synth,161.62,176.61,✓
+Lipoprotein_assembly,-18.93,-18.55,✓
+LDLR_clearance,30.34,35.56,✓
+Scavenger_SR_B,33.32,42.21,✓
+FA_transport,-49.54,-48.55,✓
+HDL_efflux,118.5,132.77,✓
+Biliary_excretion,4.31,3.3,✓
+Bile_acid_synth,-58.0,-56.51,✓
+Lipid_peroxidation,-24.46,-24.79,✓

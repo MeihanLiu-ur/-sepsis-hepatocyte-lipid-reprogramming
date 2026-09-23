@@ -1,0 +1,13 @@
+program,native_pct,native_sep,native_p_two,ds_pct,ds_sep,ds_p_two
+FAO,-29.26,有重叠,0.3,-35.74,完全分离(CLP 全低于 Sham),0.2
+Peroxisome,-0.37,有重叠,1.0,-12.0,有重叠,0.4
+Lipogenesis,53.82,完全分离(CLP 全高于 Sham),0.2,29.48,完全分离(CLP 全高于 Sham),0.2
+Cholesterol_synth,183.4,完全分离(CLP 全高于 Sham),0.1,115.66,完全分离(CLP 全高于 Sham),0.1
+Lipoprotein_assembly,-17.72,有重叠,0.3,-29.17,完全分离(CLP 全低于 Sham),0.2
+LDLR_clearance,36.33,有重叠,0.3,2.88,有重叠,0.8
+Scavenger_SR_B,41.36,完全分离(CLP 全高于 Sham),0.1,24.52,完全分离(CLP 全高于 Sham),0.2
+FA_transport,-47.81,完全分离(CLP 全低于 Sham),0.1,-60.94,完全分离(CLP 全低于 Sham),0.1
+HDL_efflux,131.59,完全分离(CLP 全高于 Sham),0.1,173.06,完全分离(CLP 全高于 Sham),0.1
+Biliary_excretion,3.22,有重叠,0.9,-11.74,有重叠,0.5
+Bile_acid_synth,-56.03,完全分离(CLP 全低于 Sham),0.1,-67.52,完全分离(CLP 全低于 Sham),0.1
+Lipid_peroxidation,-23.4,有重叠,0.4,-32.18,完全分离(CLP 全低于 Sham),0.2

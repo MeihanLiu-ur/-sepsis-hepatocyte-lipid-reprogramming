@@ -1,0 +1,25 @@
+program,gene,sham,clp,log2FC,direction,sep
+FAO,Cpt1a,0.947,0.87,-0.123,↓,有重叠
+FAO,Acadm,0.972,0.756,-0.363,↓,完全分离(CLP 全低于 Sham)
+FAO,Hadha,0.596,0.614,0.043,≈,有重叠
+Peroxisome,Acox1,1.606,1.718,0.097,≈,有重叠
+Peroxisome,Scp2,2.156,1.988,-0.117,↓,有重叠
+Peroxisome,Hsd17b4,0.912,0.828,-0.139,↓,有重叠
+Lipogenesis,Fasn,0.362,0.498,0.461,↑,有重叠
+Lipogenesis,Acaca,0.825,1.503,0.865,↑,完全分离(CLP 全高于 Sham)
+Lipogenesis,Scd1,0.334,0.185,-0.858,↓,有重叠
+Cholesterol_synth,Hmgcr,0.537,0.801,0.577,↑,有重叠
+Cholesterol_synth,Hmgcs1,0.314,1.174,1.905,↑,完全分离(CLP 全高于 Sham)
+Cholesterol_synth,Sqle,0.104,0.727,2.81,↑,完全分离(CLP 全高于 Sham)
+Lipoprotein_assembly,Apoa2,2.48,1.822,-0.445,↓,完全分离(CLP 全低于 Sham)
+Lipoprotein_assembly,Apob,1.761,1.917,0.122,↑,完全分离(CLP 全高于 Sham)
+Lipoprotein_assembly,Mttp,0.585,0.635,0.118,↑,有重叠
+Uptake,Ldlr,0.866,0.982,0.182,↑,有重叠
+Uptake,Scarb1,0.507,0.595,0.229,↑,有重叠
+Uptake,Cd36,0.178,0.394,1.141,↑,完全分离(CLP 全高于 Sham)
+Efflux,Abca1,0.877,1.687,0.944,↑,完全分离(CLP 全高于 Sham)
+Efflux,Abcg8,0.539,0.304,-0.826,↓,完全分离(CLP 全低于 Sham)
+Efflux,Apoe,2.472,1.771,-0.481,↓,完全分离(CLP 全低于 Sham)
+Lipid_peroxidation,Gpx4,0.585,0.376,-0.638,↓,有重叠
+Lipid_peroxidation,Acsl4,0.474,0.935,0.979,↑,完全分离(CLP 全高于 Sham)
+Lipid_peroxidation,Hmox1,0.049,0.155,1.653,↑,完全分离(CLP 全高于 Sham)

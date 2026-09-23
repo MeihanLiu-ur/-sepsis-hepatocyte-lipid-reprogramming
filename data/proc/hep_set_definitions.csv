@@ -1,0 +1,4 @@
+set,n,annot_purity,n_CLP,n_Sham
+A_loose,67145,0.8805,32950,34195
+B_consensus,59121,1.0,26389,32732
+C_strict,43462,1.0,20242,23220

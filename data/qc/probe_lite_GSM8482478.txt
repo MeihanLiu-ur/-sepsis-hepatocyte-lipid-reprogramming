@@ -1,0 +1,115 @@
+==========================================================================
+PROBE (lite)   dir=data/raw   prefix=GSM8482478
+==========================================================================
+[load] GSM8482478: 40879 基因 x 2567689 细胞, nnz=60230479, 耗时 2.1s
+
+[qc] 分布 (未过滤)
+     total_counts   median=       1.0  q05=      0.0  q95=      12.0
+     n_genes        median=       1.0  q05=      0.0  q95=      12.0
+     pct_mt         median=       0.0  q05=      0.0  q95=       0.0
+[note] snRNA 的 pct_mt 天然接近 0, 不能作为主过滤阈值
+
+[celltype] marker 打分 argmax 粗判 (仅供数量级估计)
+     Hepatocyte     匹配 7/7 个 marker
+     Endothelial    匹配 6/6 个 marker
+     Kupffer        匹配 4/4 个 marker
+     Macrophage     匹配 5/5 个 marker
+     Neutrophil     匹配 5/5 个 marker
+     T_NK           匹配 4/4 个 marker
+     B              匹配 3/3 个 marker
+     HSC            匹配 4/4 个 marker
+     Cholangiocyte  匹配 4/4 个 marker
+     Hepatocyte      2560290  ( 99.7%)
+     Cholangiocyte      3032  (  0.1%)
+     Endothelial        1781  (  0.1%)
+     Kupffer            1049  (  0.0%)
+     HSC                 954  (  0.0%)
+     Macrophage          330  (  0.0%)
+     Neutrophil          227  (  0.0%)
+     T_NK                 15  (  0.0%)
+     B                    11  (  0.0%)
+
+>>> Q1  肝细胞绝对数 = 2560290 / 2567689
+     区带分析门槛: 每 zone ~150-300 细胞 -> 单样本需 >=500-1000
+     判定: PASS
+
+[zonation] landmark 基因在肝细胞子集中的检出率 (n=2560290)
+   -- periportal(z1)
+        Ass1         0.63%  LOW 
+        Arg1         0.95%  LOW 
+        Cps1         2.08%  LOW 
+        Otc          0.30%  LOW 
+        Gls2         0.38%  LOW 
+        Sds          0.56%  LOW 
+        Hal          0.41%  LOW 
+        Tat          3.14%  LOW 
+        Hpd          0.58%  LOW 
+        Pck1         1.42%  LOW 
+        Cyp2f2       0.18%  LOW 
+   -- pericentral(z3)
+        Glul         0.12%  LOW 
+        Cyp2e1       0.71%  LOW 
+        Cyp1a2       0.03%  LOW 
+        Oat          0.23%  LOW 
+        Slc1a2       0.19%  LOW 
+        Axin2        0.03%  LOW 
+        Rgn          0.19%  LOW 
+        Cyp2c29      0.08%  LOW 
+        Nnmt         0.45%  LOW 
+        Tbx3         0.13%  LOW 
+
+>>> Q2  检出率 >30% 的 landmark 数 = 0 (门槛: 两端各>=4, 共>=8)
+     判定: FAIL landmark 检出不足
+
+[lipid] 脂质程序基因在肝细胞子集中的检出率
+   -- FAO                    匹配 11/11, 检出>20% 的  0 个, 平均   0.3%
+          Acox1          0.75%
+          Hmgcs2         0.66%
+          Ppara          0.47%
+          Acadm          0.44%
+          Cpt1a          0.36%
+   -- Peroxisome             匹配  8/ 8, 检出>20% 的  0 个, 平均   0.4%
+          Scp2           1.04%
+          Acox1          0.75%
+          Abcd3          0.47%
+          Pex14          0.30%
+          Pex5           0.22%
+   -- Lipogenesis            匹配  9/ 9, 检出>20% 的  0 个, 平均   0.3%
+          Acaca          0.61%
+          Mlxipl         0.48%
+          Elovl6         0.33%
+          Dgat2          0.32%
+          Fasn           0.29%
+   -- Cholesterol_synth      匹配 11/11, 检出>20% 的  0 个, 平均   0.4%
+          Fdps           0.65%
+          Hmgcs1         0.62%
+          Fdft1          0.46%
+          Ldlr           0.42%
+          Hmgcr          0.41%
+   -- Lipoprotein_assembly   匹配  7/ 7, 检出>20% 的  0 个, 平均   0.9%
+          Apoa1          1.57%
+          Apoa2          1.39%
+          Apoe           1.04%
+          Apob           0.97%
+          P4hb           0.58%
+   -- Uptake                 匹配  8/ 8, 检出>20% 的  0 个, 平均   0.3%
+          Slc27a2        0.75%
+          Lrp1           0.61%
+          Ldlr           0.42%
+          Scarb1         0.30%
+          Cd36           0.29%
+   -- Efflux                 匹配  6/ 6, 检出>20% 的  0 个, 平均   0.3%
+          Abca1          0.80%
+          Abcg5          0.25%
+          Nr1h3          0.23%
+          Abcg8          0.21%
+          Nr1h2          0.13%
+   -- Lipid_peroxidation     匹配  9/ 9, 检出>20% 的  0 个, 平均   0.1%
+          Nfe2l2         0.35%
+          Gpx4           0.23%
+          Acsf2          0.20%
+          Hmox1          0.14%
+          Aifm2          0.14%
+
+>>> Q3  具备 >=4 个可用基因的脂质程序数 = 0 / 8 (门槛 >=5)
+     判定: FAIL 程序基因覆盖不足
